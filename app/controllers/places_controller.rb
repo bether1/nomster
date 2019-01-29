@@ -18,6 +18,10 @@ class PlacesController < ApplicationController
     @place = Place.find(params[:id])
   end
 
+  def edit
+    @place = Place.find(params[:id])
+  end
+
 
   private
 
@@ -27,3 +31,5 @@ class PlacesController < ApplicationController
 
 end
 
+# each of the above definitions are tied to a file in the places menu
+# the files in the places folder are all html files for URLs
