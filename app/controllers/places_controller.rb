@@ -2,12 +2,13 @@ class PlacesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :edit, :update]
 
   def index
-    @places = Place.all
+    @places = Place.paginate(:page => params[:page]).per_page(3)
   end
 
   def new
     @place = Place.new
   end
+
 
   def create
   @place = current_user.places.create(place_params)
@@ -17,6 +18,7 @@ class PlacesController < ApplicationController
       render :new, status: :unprocessable_entity
     end
   end
+
 
   def show
     @place = Place.find(params[:id])
