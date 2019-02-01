@@ -4,28 +4,28 @@
   <br/><br/>
   <p><%= @place.description %></p>
 
-    <script>
-      function initMap() {
-        var myLatLng = {lat: -25.363, lng: 131.044};
+  <script>
+    function initMap() {
+      var myLatLng = {lat: -25.363, lng: 131.044};
 
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 12,
-          center: myLatLng
-        });
+      var map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 12,
+        center: myLatLng
+      });
 
-        var marker = new google.maps.Marker({
-          position: myLatLng,
-          map: map,
-          title: 'Hello World!'
-        });
-      }
-    </script>
+      var marker = new google.maps.Marker({
+        position: myLatLng,
+        map: map,
+        title: 'Hello World!'
+      });
+    }
+  </script>
 
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmp7dfW_-tDJPubiXICE_5FDEjvg5fqvM&callback=initMap">
-    </script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7dWAO0EHVUcT8cvGaX5bxM8j137frTag&callback=initMap">
+  </script>
 
-    <div id="map"></div>
+  <div id="map"></div>
 
 
 
