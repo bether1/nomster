@@ -86,3 +86,12 @@
     </div>
   <% end %>
 </div>
+
+<%= simple_form_for @photo, url: '#' do |f| %>
+  <%= f.input :photo %>
+  <%= f.input :user_id %>
+  <%= f.input :place_id %>
+  <%= f.submit "Add A Photo", class: 'btn btn-primary' %>
+<% end %>
+
+
