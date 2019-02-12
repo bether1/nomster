@@ -33,7 +33,12 @@
   </a>
 </div>
 
-<%= will_paginate @place %> 
+
+  <div class="digg_pagination">
+    <div class="page_info">
+    <%= will_paginate @posts, :container => false %>
+    </div>
+  </div>
 
 <% @places.each do |place| %>
   <div class="booyah-box col-10 offset-1">
